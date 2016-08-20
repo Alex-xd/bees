@@ -1,0 +1,322 @@
+@import "reset.css";
+//函数、变量、动画帧定义
+//=====================================================================
+.css-moving-item() {
+  //设置一个元素为可移动的
+  transition: All 0.4s ease-in-out;
+  -webkit-transition: All 0.4s ease-in-out;
+  -moz-transition: All 0.4s ease-in-out;
+  -o-transition: All 0.4s ease-in-out;
+}
+
+.css-moving(@lengthX,@lengthY) {
+  //移动距离
+  transform: translate(@lengthX, @lengthY);
+  -webkit-transform: translate(@lengthX, @lengthY);
+  -moz-transform: translate(@lengthX, @lengthY);
+  -o-transform: translate(@lengthX, @lengthY);
+  -ms-transform: translate(@lengthX, @lengthY);
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -35%, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 35%, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes lineMidShow {
+  0% {
+    opacity: 0;
+    width: 0;
+  }
+  100% {
+    width: 50%;
+    opacity: 1;
+  }
+}
+
+//大banner盒子
+//=======================================================================
+.banner-box {
+  height: 101%;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  //上一页、下一页按钮
+  //============================
+  .btn {
+    position: absolute;
+    top: 42%;
+    display: block;
+    width: 60px;
+    height: 25px;
+    z-index: 999;
+    opacity: .8;
+    .css-moving-item();
+  }
+  .btn-next {
+    right: 25px;
+    background: url("../images/nextPage-btn.png") no-repeat right;
+    &:hover { .css-moving(@lengthX: 15px,@lengthY: 0); }
+  }
+  .btn-prev {
+    left: 25px;
+    background: url("../images/prevPage-btn.png") no-repeat;
+    &:hover { .css-moving(@lengthX: -15px,@lengthY: 0); }
+  }
+  //小圆点标识
+  //============================
+  .buttons {
+    margin: 0 auto;
+    position: relative;
+    top: 88%;
+    height: 10px;
+    width: 100px;
+    z-index: 1000;
+    span {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      left: 0;
+      border-radius: 50%;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      background: #fff;
+      cursor: pointer;
+      z-index: 999;
+    }
+    .on {
+      width: 30px;
+      height: 30px;
+      margin-top: -10px;
+      margin-left: -10px;
+      background: url("../images/small-dots-on.png") no-repeat;
+    }
+  }
+  #show-down {
+    display: inline-block;
+    position: absolute;
+    top: 93%;
+    left: 50%;
+    margin-left: -16px;
+    width: 32px;
+    height: 32px;
+    z-index: 1200;
+    background: url("../images/sprite.png") -200px -2px no-repeat;
+    animation: upDown 1s infinite linear both;
+    @keyframes upDown {
+      0% {
+        top: 92%;
+      }
+      50% {
+        top: 93%;
+      }
+      100% {
+        top: 92%;
+      }
+    }
+  }
+}
+
+//放banner的长长的ul
+//===========================================
+.banner-ul {
+  position: absolute;
+  width: 500%;
+  height: 100%;
+  li {
+    height: 100%;
+    width: 20%;
+    display: inline-block;
+    float: left;
+    text-align: center;
+    font-size: 40px;
+    background: #26b5a3;
+  }
+}
+
+//banner文字
+//===========================================
+.banner-1-text {
+  position: relative;
+  top: 40%;
+  width: 80%;
+  margin: -50px auto;
+  z-index: 999;
+  h1 {
+    color: #fff;
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 7px;
+    animation: fadeInDown 1000ms linear both;
+  }
+  
+  h2 {
+    margin-bottom: 14px;
+    color: #fff;
+    font-size: 20px;
+    animation: fadeInDown 1000ms linear both;
+    animation-delay: .8s;
+  }
+  .home-ico {
+    display: inline-block;
+    width: 55px;
+    height: 55px;
+    background: url("../images/logo.png") no-repeat;
+    cursor: pointer;
+    animation: fadeInDown 1000ms linear both;
+    animation-delay: 1.2s;
+  }
+  
+}
+
+.banner-2-text {
+  position: relative;
+  top: 33%;
+  width: 80%;
+  margin: 0 auto;
+  z-index: 10;
+  h1 {
+    color: #fff;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    animation: fadeInDown 1000ms linear both;
+  }
+  h2 {
+    color: #fff;
+    font-size: 20px;
+    animation: fadeInDown 1000ms linear both;
+  }
+  .line {
+    height: 2px;
+    width: 400px;
+    margin: 20px auto;
+    background: #fff;
+    animation: lineMidShow 1000ms linear both;
+  }
+}
+
+.banner-3-video {
+  position: relative;
+  margin: 0 auto;
+  top: 17%;
+  z-index: 999;
+}
+
+//圆圈导航
+//==================================================================
+.guider-tab {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  z-index: 999;
+  background-color: #fff;
+}
+
+.gt-header {
+  color: #27384c;
+  text-align: center;
+  padding: 40px 0 44px 0;
+  h2 {
+    font-size: 30px;
+    animation: fadeInUp 1000ms linear both;
+  }
+  h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    animation: fadeInUp 1000ms linear both;
+    animation-delay: .5s;
+  }
+  .ht-header-slogan {
+    width: 50%;
+    margin: 0 auto;
+    border-top: 2px solid #27384c;
+    padding-top: 15px;
+    font-size: 16px;
+    animation: fadeInUp 1000ms linear both;
+    animation-delay: 1s;
+  }
+}
+
+//导航调整圆
+//===========================
+.gt-guider-ball {
+  width: 810px;
+  margin: 0 auto 120px;
+  > a {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    margin-left: 70px;
+    float: left;
+    position: relative;
+    text-align: center;
+    border-radius: 50%;
+    animation: fadeInUp 1000ms linear both;
+    &:hover {
+      .css-moving-item();
+      .css-moving(@lengthX: -5px,@lengthY: -10px);
+      box-sizing: border-box;
+      border: 3px solid #26b5a3;
+      cursor: pointer;
+    }
+  }
+  h2 {
+    font-size: 15px;
+    color: #fff;
+    position: relative;
+    z-index: 1000;
+    top: 57px;
+  }
+  .cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    background: #666;
+    opacity: .4;
+    &:hover {
+      animation: changeOpa 1.3s linear both;;
+      @keyframes changeOpa {
+        0% {
+          opacity: .4;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+    }
+  }
+  .gt-team-intro {
+    background: url("../images/sprite.png") 0 -48px no-repeat;
+  }
+  .gt-product-intro {
+    background: url("../images/sprite.png") -150px -48px no-repeat;
+  }
+  .gt-team-honor {
+    background: url("../images/sprite.png") -300px -48px no-repeat;
+  }
+  .gt-join-us {
+    background: url("../images/sprite.png") -450px -48px no-repeat;
+  }
+}

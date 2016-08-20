@@ -1,0 +1,197 @@
+//LESS函数定义
+//===================================================
+.css-moving-item() {
+  //设置一个元素为可移动的
+  transition: All .5s ease-in-out;
+  -webkit-transition: All .5s ease-in-out;
+  -moz-transition: All .5s ease-in-out;
+  -o-transition: All .5s ease-in-out;
+}
+
+.css-moving(@lengthX,@lengthY) {
+  //移动距离
+  transform: translate(@lengthX, @lengthY);
+  -webkit-transform: translate(@lengthX, @lengthY);
+  -moz-transform: translate(@lengthX, @lengthY);
+  -o-transform: translate(@lengthX, @lengthY);
+  -ms-transform: translate(@lengthX, @lengthY);
+}
+
+//CSS3动画帧定义
+//===================================================
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -35%, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes lineMidShow {
+  0% {
+    opacity: 0;
+    width: 0;
+  }
+  100% {
+    width: 50%;
+    opacity: 1;
+  }
+}
+
+@keyframes lineMidShow {
+  0% {
+    opacity: 0;
+    width: 0;
+  }
+  100% {
+    width: 50%;
+    opacity: 1;
+  }
+}
+
+/*顶部固定返回*/
+//===================================================
+.back-index {
+  width: 100%;
+  height: 60px;
+  background: #27384c;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  overflow: hidden;
+  #LOGO {
+    display: block;
+    float: left;
+    margin-left: 25px;
+    width: 60px;
+    .css-moving-item();
+    .css-moving(@lengthX: 0,@lengthY: 10px);
+    &:hover {
+      .css-moving(@lengthX: 0,@lengthY: 0px)
+    }
+  }
+  
+  img {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+//导航调整圆
+//===================================================
+.gt-guider-ball {
+  float: right;
+  height: 50px;
+  width: 300px;
+  padding: 5px 0 5px 0;
+  a {
+    position: relative;
+    float: left;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin-left: 15px;
+    text-align: center;
+    border-radius: 50%;
+    animation: slideInto 1s linear both;
+    @keyframes slideInto {
+      0% {
+        opacity: 0;
+        transform: translate3d(500px, 0, 0);
+      }
+      100% {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  }
+  h2 {
+    font-size: 6px;
+    color: #fff;
+    position: relative;
+    z-index: 1000;
+  }
+  h2:first-child {
+    margin-top: 17px;
+  }
+  .cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1111;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    background: #666;
+    opacity: .2;
+    &:hover {
+      animation: changeOpa 1s linear both;;
+      @keyframes changeOpa{
+        0%{
+          opacity: .;
+        }
+        100%{
+          opacity: 0;
+        }
+      }
+    }
+  }
+  .gt-team-intro {
+    background: url("../images/sprite.png") 0 -2px no-repeat;
+  }
+  .gt-product-intro {
+    background: url("../images/sprite.png") -50px -2px no-repeat;
+  }
+  .gt-team-honor {
+    background: url("../images/sprite.png") -100px -2px no-repeat;
+  }
+  .gt-join-us {
+    background: url("../images/sprite.png") -150px -2px no-repeat;
+  }
+}
+
+//标题介绍
+//===================================================
+.guider-tab {
+  margin-top: 60px;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  z-index: 1;
+  background-color: #fff;
+}
+
+.gt-header {
+  color: #27384c;
+  text-align: center;
+  padding: 50px 0 60px 0;
+  h2 {
+    font-size: 30px;
+    animation: fadeInDown 1000ms linear both;
+  }
+  h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    animation: fadeInDown 1000ms linear both;
+    animation-delay: .8s;
+  }
+  .line {
+    width: 50%;
+    margin: 0 auto;
+    height: 2px;
+    background: #27384c;
+    animation: lineMidShow 800ms linear both;
+    animation-delay: 1.2s;
+  }
+  .ht-header-slogan {
+    width: 50%;
+    margin: 0 auto;
+    padding-top: 15px;
+    font-size: 16px;
+    animation: fadeInDown 1000ms linear both;
+    animation-delay: 1.3s;
+  }
+}

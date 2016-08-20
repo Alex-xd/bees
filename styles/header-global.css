@@ -1,0 +1,60 @@
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -35%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes lineMidShow {
+  0% {
+    opacity: 0;
+    width: 0;
+  }
+  100% {
+    width: 50%;
+    opacity: 1;
+  }
+}
+.guider-tab {
+  margin-top: 60px;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  z-index: -3;
+  background-color: #fff;
+}
+.gt-header {
+  color: #27384c;
+  text-align: center;
+  padding: 60px 0 60px 0;
+}
+.gt-header h2 {
+  font-size: 30px;
+  animation: fadeInDown 1000ms linear both;
+}
+.gt-header h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  animation: fadeInDown 1000ms linear both;
+  animation-delay: .8s;
+}
+.gt-header .line {
+  width: 50%;
+  margin: 0 auto;
+  height: 2px;
+  background: #27384c;
+  animation: lineMidShow 800ms linear both;
+  animation-delay: 1.2s;
+}
+.gt-header .ht-header-slogan {
+  width: 50%;
+  margin: 0 auto;
+  padding-top: 15px;
+  font-size: 16px;
+  animation: fadeInDown 1000ms linear both;
+  animation-delay: 1.3s;
+}

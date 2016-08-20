@@ -1,0 +1,175 @@
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -35%, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes lineMidShow {
+  0% {
+    opacity: 0;
+    width: 0;
+  }
+  100% {
+    width: 50%;
+    opacity: 1;
+  }
+}
+@keyframes lineMidShow {
+  0% {
+    opacity: 0;
+    width: 0;
+  }
+  100% {
+    width: 50%;
+    opacity: 1;
+  }
+}
+/*顶部固定返回*/
+.back-index {
+  width: 100%;
+  height: 60px;
+  background: #27384c;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  overflow: hidden;
+}
+.back-index #LOGO {
+  display: block;
+  float: left;
+  margin-left: 25px;
+  width: 60px;
+  transition: All 0.5s ease-in-out;
+  -webkit-transition: All 0.5s ease-in-out;
+  -moz-transition: All 0.5s ease-in-out;
+  -o-transition: All 0.5s ease-in-out;
+  transform: translate(0, 10px);
+  -webkit-transform: translate(0, 10px);
+  -moz-transform: translate(0, 10px);
+  -o-transform: translate(0, 10px);
+  -ms-transform: translate(0, 10px);
+}
+.back-index #LOGO:hover {
+  transform: translate(0, 0px);
+  -webkit-transform: translate(0, 0px);
+  -moz-transform: translate(0, 0px);
+  -o-transform: translate(0, 0px);
+  -ms-transform: translate(0, 0px);
+}
+.back-index img {
+  width: 60px;
+  height: 60px;
+}
+.gt-guider-ball {
+  float: right;
+  height: 50px;
+  width: 300px;
+  padding: 5px 0 5px 0;
+}
+.gt-guider-ball a {
+  position: relative;
+  float: left;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin-left: 15px;
+  text-align: center;
+  border-radius: 50%;
+  animation: slideInto 1s linear both;
+}
+@keyframes slideInto {
+  0% {
+    opacity: 0;
+    transform: translate3d(500px, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+.gt-guider-ball h2 {
+  font-size: 6px;
+  color: #fff;
+  position: relative;
+  z-index: 1000;
+}
+.gt-guider-ball h2:first-child {
+  margin-top: 17px;
+}
+.gt-guider-ball .cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1111;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  background: #666;
+  opacity: .2;
+}
+.gt-guider-ball .cover:hover {
+  animation: changeOpa 1s linear both;
+}
+@keyframes changeOpa {
+  0% {
+    opacity: .;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.gt-guider-ball .gt-team-intro {
+  background: url("../images/sprite.png") 0 -2px no-repeat;
+}
+.gt-guider-ball .gt-product-intro {
+  background: url("../images/sprite.png") -50px -2px no-repeat;
+}
+.gt-guider-ball .gt-team-honor {
+  background: url("../images/sprite.png") -100px -2px no-repeat;
+}
+.gt-guider-ball .gt-join-us {
+  background: url("../images/sprite.png") -150px -2px no-repeat;
+}
+.guider-tab {
+  margin-top: 60px;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  z-index: 1;
+  background-color: #fff;
+}
+.gt-header {
+  color: #27384c;
+  text-align: center;
+  padding: 50px 0 60px 0;
+}
+.gt-header h2 {
+  font-size: 30px;
+  animation: fadeInDown 1000ms linear both;
+}
+.gt-header h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  animation: fadeInDown 1000ms linear both;
+  animation-delay: .8s;
+}
+.gt-header .line {
+  width: 50%;
+  margin: 0 auto;
+  height: 2px;
+  background: #27384c;
+  animation: lineMidShow 800ms linear both;
+  animation-delay: 1.2s;
+}
+.gt-header .ht-header-slogan {
+  width: 50%;
+  margin: 0 auto;
+  padding-top: 15px;
+  font-size: 16px;
+  animation: fadeInDown 1000ms linear both;
+  animation-delay: 1.3s;
+}

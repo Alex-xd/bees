@@ -1,0 +1,393 @@
+@import "reset.css";
+@import "top-bar.css";
+html {
+  position: relative;
+  background: #eee;
+  z-index: -1;
+}
+/***************************************
+*aside moudle
+*侧边栏
+*********************************************/
+.aside {
+  position: fixed;
+  height: 80px;
+  left: 40px;
+  top: 50%;
+  z-index: 3;
+}
+.aside div {
+  font-size: 16px;
+  height: 20px;
+  margin-bottom: 40px;
+}
+.aside div a {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border: 1px solid #000;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.aside div a[check=true] {
+  background: #000;
+}
+.aside div span {
+  position: relative;
+  display: inline-block;
+  left: 8px;
+  vertical-align: middle;
+}
+.aside .bot {
+  margin-bottom: 0;
+}
+/*****************************
+*@join-us moudle
+*加入我们
+**********************************************/
+#join-us {
+  width: 100%;
+  height: 100%;
+  /*表单*/
+  /*左侧label*/
+  /*填表区*/
+  /*留言区*/
+}
+#join-us #joinForm {
+  margin-top: 40px;
+  width: 70%;
+  display: block;
+  min-width: 900px;
+  height: 396px;
+  float: left;
+  margin-left: 8%;
+  overflow: hidden;
+}
+#join-us .label-box {
+  width: 106px;
+  height: 370px;
+  margin-right: 34px;
+  float: left;
+}
+#join-us .label-box label {
+  width: 110%;
+  display: block;
+  height: 42px;
+  line-height: 42px;
+  text-align: right;
+  margin-bottom: 24px;
+  font-size: 16px;
+}
+#join-us .label-box .group {
+  margin-bottom: 0;
+}
+#join-us .input-box {
+  width: 300px;
+  height: 396px;
+  float: left;
+  font-size: 16px;
+}
+#join-us .input-box .put-row {
+  height: 42px;
+  line-height: 42px;
+  margin-bottom: 24px;
+}
+#join-us .input-box .put-row input[type=text] {
+  width: 200px;
+  height: 40px;
+  border: 1px solid #c0baba;
+  padding-left: 10px;
+  border-radius: 2px;
+  font-size: 16px;
+  background: #eee;
+}
+#join-us .input-box .last {
+  margin-bottom: 0;
+}
+#join-us input {
+  -webkit-box-shadow: 5px 5px 5px #dde1e4;
+  -moz-box-shadow: 5px 5px 5px #dde1e4;
+  box-shadow: 5px 5px 5px #dde1e4;
+}
+#join-us input[type=radio] {
+  width: 20px;
+  height: 20px;
+  line-height: 42px;
+  vertical-align: middle;
+  opacity: 0;
+}
+#join-us .cut-line {
+  width: 64px;
+  height: 42px;
+  margin-right: 2px;
+  display: inline-block;
+  font-size: 16px;
+}
+#join-us .cut-line span {
+  display: inline-block;
+  margin-left: 2px;
+  position: relative;
+}
+#join-us .cut-line span:before {
+  width: 20px;
+  height: 20px;
+  display: block;
+  position: absolute;
+  left: -22px;
+  top: 10px;
+  content: " ";
+  background: url("../images/radio-bg.png") no-repeat left -20px;
+}
+#join-us .cut-line .radio:before {
+  background: url("../images/radio-bg.png") no-repeat left top;
+  width: 20px;
+  height: 20px;
+  display: block;
+  position: absolute;
+  left: -22px;
+  top: 10px;
+  content: " ";
+}
+#join-us .cut-line .checked:before {
+  background: url("../images/radio-bg.png") no-repeat left top;
+  width: 20px;
+  height: 20px;
+  display: block;
+  position: absolute;
+  left: -22px;
+  top: 10px;
+  content: " ";
+}
+#join-us #group {
+  height: 60px;
+  margin-top: 29px;
+}
+#join-us #group label {
+  display: inline-block;
+  height: 25px;
+  line-height: 25px;
+  width: 95px;
+  vertical-align: top;
+  margin-bottom: 0;
+  margin-top: 6px;
+  float: left;
+}
+#join-us #group span {
+  height: 25px;
+  width: 75px;
+  font-size: 16px;
+  line-height: 25px;
+  display: inline-block;
+  position: relative;
+}
+#join-us #group span:before {
+  width: 20px;
+  height: 20px;
+  display: block;
+  position: absolute;
+  left: -22px;
+  top: 0;
+  content: " ";
+  background: url("../images/radio-bg.png") no-repeat left -20px;
+}
+#join-us #group .group-checked:before {
+  background: url("../images/radio-bg.png") no-repeat left top;
+  width: 20px;
+  height: 20px;
+  display: block;
+  position: absolute;
+  left: -22px;
+  top: 0;
+  content: " ";
+}
+#join-us #group input {
+  vertical-align: top;
+  background: #eee;
+}
+#join-us .le-message-box {
+  position: absolute;
+  right: 0;
+  width: 335px;
+  margin-right: 7%;
+}
+#join-us .le-message-box h3 {
+  font-size: 16px;
+  height: 26px;
+  line-height: 26px;
+  margin-bottom: 30px;
+}
+#join-us .le-message-box textarea {
+  width: 330px;
+  height: 220px;
+  margin-bottom: 32px;
+  resize: none;
+  border: #c0baba solid 1px;
+  border-radius: 3px;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 5px;
+  font-size: 16px;
+  outline: none;
+  background: #eee;
+}
+#join-us .le-message-box input {
+  display: block;
+  width: 170px;
+  height: 43px;
+  color: white;
+  background-color: #6ac0ef;
+  border: 0;
+  border-radius: 3px;
+  margin-right: auto;
+  margin-left: auto;
+  font-size: 16px;
+  resize: none;
+}
+/*****************************
+*@contact-us moudle
+*联系我们
+**********************************************/
+.centerN {
+  width: 70%;
+  min-width: 1000px;
+  height: 462px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+}
+#contact-us {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  font-size: 16px;
+}
+#contact-us form {
+  margin-left: 6%;
+  float: left;
+  width: 35%;
+  min-width: 460px;
+  height: 100%;
+  font-size: 16px;
+  background: url("../images/le-message.png") no-repeat;
+  background-size: 100%;
+}
+#contact-us form p {
+  width: 67%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  font-size: 16px;
+  color: #333;
+}
+#contact-us form .avemes {
+  margin-bottom: 6%;
+  height: 22%;
+}
+#contact-us form input[type=text] {
+  width: 162px;
+  float: right;
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid;
+  color: #333;
+}
+#contact-us form input[type=submit] {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  width: 90px;
+  height: 36px;
+  background-color: #6cbfef;
+  border: 0;
+  color: white;
+  border-radius: 3px;
+  padding-left: 5px;
+  padding-right: 5px;
+  cursor: pointer;
+}
+#contact-us form textarea {
+  resize: none;
+  width: 60%;
+  height: 100%;
+  background-color: transparent;
+  border: 1px solid grey;
+  overflow: hidden;
+  padding: 5px;
+  box-sizing: border-box;
+  outline: none;
+  color: #333;
+}
+#contact-us .contact-way {
+  height: 100%;
+  width: 35%;
+  margin-right: 6%;
+  float: right;
+  position: relative;
+  white-space: normal;
+  color: #333;
+}
+#contact-us .contact-way p {
+  width: 100%;
+  height: 20px;
+  line-height: 20px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+#contact-us .contact-way a {
+  display: block;
+  height: 20px;
+  line-height: 20px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+#contact-us .contact-way .map {
+  width: 376px;
+  height: 200px;
+  position: absolute;
+  bottom: 8%;
+  padding-left: 10%;
+  background: url("../images/map.png") no-repeat;
+  -webkit-background-size: 100%;
+  background-size: 100%;
+}
+#contact-us .icon {
+  height: 40px;
+  line-height: 40px;
+  margin-bottom: 10px;
+}
+#contact-us .icon a {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 0;
+  float: left;
+  background: url("../images/footer_icon.png") no-repeat left top;
+}
+#contact-us .icon div:hover div {
+  display: block;
+}
+#contact-us .weichat-code {
+  width: 40px;
+  height: 40px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  position: relative;
+  float: left;
+  margin-left: 14px;
+  background: url("../images/footer_icon.png") no-repeat left -40px;
+}
+#contact-us .weichat-code div {
+  position: absolute;
+  top: -48px;
+  left: 56px;
+  display: none;
+  width: 98px;
+  height: 98px;
+  background: url("../images/ercode.png") no-repeat;
+}

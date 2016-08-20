@@ -1,0 +1,418 @@
+@import url("reset.css");
+@import url("top-bar.css");
+
+html {
+  position: relative;
+  background: #eee;
+  z-index: -1;
+}
+
+/*部门介绍*/
+.content {
+  width: 100%;
+  overflow: hidden;
+  margin: -60px auto 0 ;
+  
+  .bm-box {
+    width: 1075px;
+    height: 376px;
+    margin: 0 auto 60px;
+    overflow: hidden;
+    //position: relative;
+    //left: 0;
+    //animation: upIn 2.5s linear both;
+    //@keyframes upIn {
+    //  0% {
+    //    top: 300px;
+    //  }
+    //  20% {
+    //    top: 180px;
+    //  }
+    //  33% {
+    //    top: 80px;
+    //  }
+    //  66% {
+    //    top: 50px;
+    //  }
+    //  88% {
+    //    top: 20px;
+    //  }
+    //  100% {
+    //    top: 0;
+    //  }
+    //}
+    ul {
+      width: 100%;
+      height: 316px;
+      margin-top: 60px;
+    }
+    .item-inner {
+      width: 356px;
+      height: 100%;
+    }
+    /*各项介绍*/
+    /*默认-鼠标停留样式*/
+    .on {
+      float: left;
+      width: 303px;
+      height: 100%;
+      border: 2px solid #ebebeb;
+      margin-left: -2px;
+      overflow: hidden;
+      .item-main-logo {
+        -ms-background-position-y: top;
+        background-position-y: top;
+      }
+    }
+  }
+}
+
+/*正常样式li*/
+.bm-item {
+  float: left;
+  width: 152px;
+  height: 100%;
+  border: 2px solid #ebebeb;
+  background: #fff;
+  margin-left: -2px;
+  overflow: hidden;
+  -moz-transition: width 150ms linear;
+  -webkit-transition: width 150ms linear;
+  -o-transition: width 150ms linear;
+  transition: width 150ms linear;
+}
+
+/*内容区域*/
+/*主要内容区，介绍部门类别*/
+
+.item-main {
+  position: relative;
+  float: left;
+  height: 100%;
+  width: 151px;
+  text-align: center;
+  overflow: hidden;
+  border-right: 1px solid #eee;
+  h2 {
+    width: 100%;
+    text-align: center;
+    height: 28px;
+    line-height: 26px;
+    font-size: 26px;
+    margin-top: 32px;
+    margin-bottom: 58px;
+  }
+  .item-main-logo {
+    height: 148px;
+    margin: 0 auto;
+  }
+  
+}
+
+//详细介绍
+.item-detail {
+  float: left;
+  width: 152px;
+  height: 100%;
+  text-align: center;
+  overflow: hidden;
+  margin-left: -1px;
+  font-size: 13px;
+  
+  .detail, .detail-top {
+    width: 136px;
+    padding: 10px 10px;
+    overflow: hidden;
+  }
+  .detail {
+    height: 286px;
+  }
+  h3 {
+    width: 70px;
+    height: 26px;
+    line-height: 28px;
+    margin: 0 auto;
+    border: 1px solid #adadad;
+    color: #666;
+    font-weight: 600;
+    font-size: 14px;
+  }
+  p {
+    width: 136px;
+    height: 188px;
+    line-height: 24px;
+    margin: 0 auto;
+    font-size: 13px;
+    text-align: left;
+  }
+  .detail-top {
+    height: 125px;
+    border-top: 1px solid #eee;
+    p {
+      height: 78px;
+      font-size: 13px;
+    }
+  }
+}
+
+/*********************************************
+*配置各部门的标志性图片
+*当鼠标移到li，使用js换图片的top，让top=0
+*************************************************/
+.bm-bg1 .item-main-logo {
+  background: url("../images/department-bg.png") left -149px no-repeat;
+  width: 132px;
+}
+
+.bm-bg2 .item-main-logo {
+  background: url("../images/department-bg.png") -131px -149px no-repeat;
+  width: 140px;
+}
+
+.bm-bg3 .item-main-logo {
+  background: url("../images/department-bg.png") -271px -149px no-repeat;
+  width: 120px;
+}
+
+.bm-bg4 .item-main-logo {
+  background: url("../images/department-bg.png") -391px -149px no-repeat;
+  width: 150px;
+}
+
+.bm-bg5 .item-main-logo {
+  background: url("../images/department-bg.png") -542px -149px no-repeat;
+  width: 144px;
+}
+
+.bm-bg6 .item-main-logo {
+  background: url("../images/department-bg.png") -542px -149px no-repeat;
+  width: 144px;
+}
+
+/*********************************************
+*成员风采
+*效果先做着，有时间可以改好一些
+***********************************/
+/***************************************@persons-center************/
+.per-wrap {
+  width: 100%;
+  height: 130%;
+  position: relative;
+  overflow: hidden;
+}
+
+#persons-center {
+  width: 1180px;
+  margin: 40px auto 60px;
+  position: relative;
+  left: 0;
+  animation: upIn 1.5s linear both;
+  @keyframes upIn {
+    0% {
+      top: 300px;
+    }
+    20% {
+      top: 180px;
+    }
+    33% {
+      top: 80px;
+    }
+    66% {
+      top: 50px;
+    }
+    88% {
+      top: 20px;
+    }
+    100% {
+      top: 0;
+    }
+  }
+  ul {
+    width: 100%;
+    height: 320px;
+  }
+  li {
+    float: left;
+    width: 378px;
+    height: 140px;
+    border: 1px solid #ddd;
+    margin: 0 0 20px;
+    overflow: hidden;
+    color: #5c5c5c;
+  }
+  li:hover {
+    box-shadow: 0 0 10px #adadad;
+    -moz-box-shadow: 0 0 10px #adadad; }
+  .center-per {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  
+  .pic {
+    float: left;
+    display: block;
+    width: 90px;
+    height: 90px;
+    margin: 24px 0 24px 24px;
+  }
+  .person {
+    float: right;
+    width: 250px;
+    height: 96px;
+    margin-top: 24px;
+  }
+  .name {
+    color: #5c5c5c;
+    font-weight: 500;
+    font-size: 18px;
+    display: block;
+    height: 22px;
+    line-height: 22px;
+  }
+  .institude {
+    margin-top: 10px;
+    font-size: 16px;
+    height: 16px;
+    width: 242px;
+    line-height: 14px;
+  }
+  .per_achievement {
+    font-size: 18px;
+    height: 40px;
+    margin-top: 16px;
+    p {
+      height: 20px;
+      line-height: 20px;
+      width: 200px;
+      font-size: 18px;
+      text-align: center;
+      margin-bottom: 6px;
+      color: #fff;
+      background-color: #ffde17;
+    }
+  }
+  img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+  }
+  .com-title {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 60px;
+    color: #333;
+  }
+  .h_mginleft, .institude, .name {
+    margin-left: 8px;
+  }
+}
+
+/*********************************
+*@leader
+*团队领军者
+***************************************/
+.leader {
+  width: 100%;
+  height: 130%;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+.center-box-container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+#show-down {
+  display: inline-block;
+  position: fixed;
+  top: 93%;
+  left: 50%;
+  margin-left: -16px;
+  width: 32px;
+  height: 32px;
+  z-index: 1200;
+  background: url("../images/shouDown.png") no-repeat;
+  animation: upDown 1s infinite linear both;
+  @keyframes upDown {
+    0% {
+      top: 91%;
+    }
+    50% {
+      top: 93%;
+    }
+    100% {
+      top: 91%;
+    }
+  }
+}
+
+.center-box {
+  max-width: 400px;
+  width: 25%;
+  float: left;
+  opacity: 0;
+  .bottom {
+    width: 100%;
+    h2 {
+      font-size: 20px;
+      margin-bottom: 10px;
+      margin-top: 10px;
+      color: #2edec6;
+    }
+    .posi {
+      font-size: 14px;
+      margin-left: 4px;
+      &:after {
+        display: inline-block;
+        content: "|";
+        width: 2px;
+        margin-right: 4px;
+        margin-left: 4px;
+      }
+    }
+    .cut-line {
+      font-size: 14px;
+      margin-left: 4px;
+    }
+    
+  }
+}
+
+.top {
+  width: 100%;
+  max-width: 400px;
+  max-height: 260px;
+  overflow: hidden;
+  img {
+    width: 100%;
+  }
+  
+}
+
+.fact {
+  display: none;
+  padding-right: 6px;
+  overflow: hidden;
+  &:last-child {
+    margin-top: 12px;
+  }
+  p {
+    font-size: 13px;
+    color: #313131;
+    float: right;
+    width: 220px;
+  }
+  h3 {
+    color: #313131;
+    font-size: 15px;
+    width: 48px;
+    float: left;
+  }
+}
+

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>加入我们</title>
+    <link rel="stylesheet" href="styles/join-us.css"/>
+</head>
+<body>
+<!--顶部返回主页按钮---fixed-->
+<div class="back-index">
+    <!--返回主页LOGO-->
+    <a id="LOGO" href="./index.html">
+        <img src="images/logo.png" alt="logo">
+    </a>
+
+    <!--模块导航-->
+    <div class="gt-guider-ball clear-float">
+        <a href="./team-intro.html" class="gt-team-intro" style="animation-delay: .8s;">
+            <h2>Team Introduction</h2>
+            <h2>团队介绍</h2>
+            <div class="cover"></div>
+        </a>
+        <a href="./product-intro.html" class="gt-product-intro" style="animation-delay: .6s;">
+            <h2>Our Products</h2>
+            <h2>产品介绍</h2>
+            <div class="cover"></div>
+        </a>
+        <a href="./team-honor.html" class="gt-team-honor" style="animation-delay: .4s;">
+            <h2>Team Honor</h2>
+            <h2>团队荣誉</h2>
+            <div class="cover"></div>
+        </a>
+        <a href="./join-us.html" class="gt-join-us" style="animation-delay: .2s;">
+            <h2>Join Us</h2>
+            <h2>加入我们</h2>
+            <div class="cover"></div>
+        </a>
+    </div>
+</div>
+
+<div class="aside">
+    <div>
+        <a href="javascript:;" check="true" id="btn-join-us"></a><span>加入</span>
+    </div>
+    <div class="bot">
+        <a href="javascript:;" check="false" id="btn-contact"></a><span>联系</span>
+    </div>
+</div>
+<!--加入我们-->
+<div id="join-us">
+    <div class="centerN">
+        <form id="joinForm" class="j-form">
+            <div class="label-box">
+                <label for="name">姓名</label>
+                <label>性别</label>
+                <label>所在高校</label>
+                <label for="grade">院系/专业/年级</label>
+                <label for="tel">联系电话</label>
+                <label for="group">报名组别</label>
+            </div>
+            <div class="input-box">
+                <div class="put-row">
+                    <input type="text" name="name" id="name"/>
+                </div>
+                <div class="put-row radgend">
+                    <label class="cut-line ">
+                        <input name="gender" value="male" checked="checked" type="radio"/><span class="radio"
+                    >男</span>
+                    </label>
+                    <label class="cut-line last">
+                        <input name="gender" value="female" type="radio" class="dd"/><span>女</span>
+                    </label>
+                </div>
+                <div class="put-row radloca">
+                    <label class="cut-line">
+                        <input type="radio" name="location" checked="checked"><span class=" checked">重邮</span>
+                    </label>
+                    <label class="cut-line last">
+                        <input type="radio" name="location"><span>重大</span>
+                    </label>
+                </div>
+                <div class="put-row" id="grade">
+                    <input type="text" placeholder="16字以内">
+                </div>
+                <div class="put-row" id="tel">
+                    <input type="text">
+                </div>
+                <div class="put-row last radgr " id="group">
+                    <label><input name="group" value="市场运营" type="radio" checked="checked"/><span class="group-checked">市场运营</span></label>
+                    <label><input name="group" value="产品策划" type="radio"/><span>产品策划</span></label>
+                    <label><input name="group" value="设觉设计" type="radio"/><span>视觉设计</span></label>
+                    <label><input name="group" value="技术研发Web" type="radio"/><span
+                    >技术研发部（前端）</span></label>
+                    <label><input name="group" value="技术研发后台" type="radio"/><span>技术研发部（后台）</span></label>
+                    <label><input name="group" value="技术研发移动端" type="radio"/><span>技术研发部（移动</span></label>
+                </div>
+            </div>
+            <div class="le-message-box">
+                <h3>个人简介</h3>
+                <textarea name="selfIntro" id="selfText" placeholder="自我介绍/组别意向的来由/个人优势等等"></textarea>
+                <input type="submit" value="报名">
+            </div>
+        </form>
+    </div>
+</div>
+<!--联系我们-->
+<div id="contact-us">
+    <div class="centerN">
+        <form>
+            <p style="margin-top:10%;">姓名<input type="text"></p>
+            <p>专业<input type="text"></p>
+            <p>邮箱<input type="text"></p>
+            <p>想法与建议<input type="text"></p>
+            <p class="avemes"><textarea name="" id=""></textarea></p>
+            <input type="submit" value="提交">
+        </form>
+        <div class="contact-way">
+            <p>联系我们：400-8388-719</p>
+            <a href="mailto:contact@campussay.com">contact@campussay.com</a>
+            <div class="meet-campus">
+                <p>遇见校园说，遇见未来!</p>
+                <a target="-_blank" href="http://www.campussay.com/">关注网址：http://www.campussay.com/</a>
+            </div>
+            <div class="icon clear-float">
+                <a target="-_blank"
+                   href="http://weibo.com/u/5752440839?refer_flag=1001030101_&is_all=1&sudaref=www.campussay.com&retcode=6102"></a>
+                <div class="weichat-code">
+                    <div></div>
+                </div>
+            </div>
+            <p>中国重庆市南岸区崇文路二号重庆邮电大学创业孵化基地6楼</p>
+            <div class="map"></div>
+        </div>
+    </div>
+</div>
+<script src="scripts/jqurey.js"></script>
+<script type="text/javascript" src="scripts/join-us.js"></script>
+<script>
+    $(document).ready(function () {
+        var height = $(window).height();
+        var $btn_down = $("#btn-contact");
+        var $btn_up = $("#btn-join-us");
+        var $window = $('html,body');
+
+        $btn_up.click(function () {
+            if (!$window.is(":animated")) {
+                $window.stop(true).animate({scrollTop: 0}, 1500);
+            }
+        });
+
+        $btn_down.click(function () {
+            if (!$window.is(":animated")) {
+                $window.stop(true).animate({scrollTop: height}, 1500);
+            }
+        });
+
+        $(window).scroll(function () {
+            if ($(window).scrollTop() <= height-40) {
+                $btn_down.attr("check","false");
+                $btn_up.attr("check","true");
+            }
+            else{
+                $btn_down.attr("check","true");
+                $btn_up.attr("check","false");
+            }
+        });
+
+    });
+
+</script>
+</body>
+</html>
